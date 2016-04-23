@@ -5,7 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 
 public class GameActivity extends AppCompatActivity {
+    //Saves space for buttons.
     Button aOne, aTwo, aThree, bOne, bTwo, bThree, cOne, cTwo, cThree;
+    //Establish that the buttons will be an array.
     Button[] mArray;
 
     @Override
@@ -13,6 +15,7 @@ public class GameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
+        //Declares Buttons
         aOne = (Button) (findViewById(R.id.a1));
         aTwo = (Button) (findViewById(R.id.a2));
         aThree = (Button) (findViewById(R.id.a3));
@@ -23,6 +26,7 @@ public class GameActivity extends AppCompatActivity {
         cTwo = (Button) (findViewById(R.id.c2));
         cThree = (Button) (findViewById(R.id.c3));
 
+        //List the buttons in an array for easier use.
         mArray = new Button[] {aOne, aTwo, aThree, bOne, bTwo, bThree, cOne, cTwo, cThree};
 
     }
