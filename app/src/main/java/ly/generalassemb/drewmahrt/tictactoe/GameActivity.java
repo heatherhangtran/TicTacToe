@@ -6,9 +6,10 @@ import android.widget.Button;
 
 public class GameActivity extends AppCompatActivity {
     //Saves space for buttons.
-    Button aOne, aTwo, aThree, bOne, bTwo, bThree, cOne, cTwo, cThree;
-    //Establish that the buttons will be an array.
-    Button[] mArray;
+    Button[] mButtons = new Button[10];
+    //The squares will be identified as integers.
+    int[] box = new int[10];
+    int counter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,18 +17,46 @@ public class GameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_game);
 
         //Declares Buttons
-        aOne = (Button) (findViewById(R.id.a1));
-        aTwo = (Button) (findViewById(R.id.a2));
-        aThree = (Button) (findViewById(R.id.a3));
-        bOne = (Button) (findViewById(R.id.b1));
-        bTwo = (Button) (findViewById(R.id.b2));
-        bThree = (Button) (findViewById(R.id.b3));
-        cOne = (Button) (findViewById(R.id.c1));
-        cTwo = (Button) (findViewById(R.id.c2));
-        cThree = (Button) (findViewById(R.id.c3));
+        mButtons[1] = (Button) (findViewById(R.id.a1));
+        mButtons[2] = (Button) (findViewById(R.id.a2));
+        mButtons[3] = (Button) (findViewById(R.id.a3));
+        mButtons[4] = (Button) (findViewById(R.id.b1));
+        mButtons[5] = (Button) (findViewById(R.id.b2));
+        mButtons[6] = (Button) (findViewById(R.id.b3));
+        mButtons[7] = (Button) (findViewById(R.id.c1));
+        mButtons[8] = (Button) (findViewById(R.id.c2));
+        mButtons[9] = (Button) (findViewById(R.id.c3));
 
-        //List the buttons in an array for easier use.
-        mArray = new Button[] {aOne, aTwo, aThree, bOne, bTwo, bThree, cOne, cTwo, cThree};
-
+//        for (int i = 1; i <= 9; i++) {
+//            mButtons[i].setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    if (i % 2 = 0) {
+//                        mButtons[i].setText("O");
+//                    } else {
+//                        mButtons[i].setText("X");
+//                    }
+//                }
+//            });
+//        }
     }
+
+    public void playerOne(int i) {
+        mButtons[i].setText("X");
+        mButtons[i].setEnabled(false);
+        box[i] = 1;
+        //winningPlayer(i);
+    }
+
+    public void playerTwo() {
+        for (int i = 1 ; i <= 9; i++) {
+            if (mButtons[i].isEnabled()) {
+                mButtons[i].setText("O");
+                mButtons[i].setEnabled(false);
+                box[i] = 2;
+                break;
+            }
+        }
+    }
+
 }
