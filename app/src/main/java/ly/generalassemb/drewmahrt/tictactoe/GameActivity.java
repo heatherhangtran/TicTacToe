@@ -14,6 +14,9 @@ public class GameActivity extends AppCompatActivity {
     private int count;
     //Saves space for textview.
     private TextView textView;
+    String playerOne, playerTwo;
+    public static final String PLAYER_ONE_TAG = "playerOne";
+    public static final String PLAYER_TWO_TAG = "playerTwo";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +39,8 @@ public class GameActivity extends AppCompatActivity {
         //Getting intent from MainActivity.
         //Need to fix textView alternating name.
         Intent oldIntent = getIntent();
-        String playerOne = oldIntent.getStringExtra("PlayerOne");
-        String playerTwo = oldIntent.getStringExtra("PlayerTwo");
+        playerOne = oldIntent.getStringExtra(PLAYER_ONE_TAG);
+        playerTwo = oldIntent.getStringExtra(PLAYER_TWO_TAG);
         textView.setText(playerOne + "'s Turn");
     }
 
@@ -50,92 +53,112 @@ public class GameActivity extends AppCompatActivity {
             case R.id.a1:
                 if (count % 2 == 0 && playerOneClicked) {
                     mButtons[1].setText("O");
+                    textView.setText(playerTwo + "'s Turn");
                     break;
 
                 } else {
                     mButtons[1].setText("X");
+                    textView.setText(playerOne + "'s Turn");
                     break;
                 }
 
             case R.id.a2:
                 if (count % 2 == 0 && playerOneClicked) {
                     mButtons[2].setText("O");
+                    textView.setText(playerTwo + "'s Turn");
                     break;
 
                 } else {
                     mButtons[2].setText("X");
+                    textView.setText(playerOne + "'s Turn");
                     break;
                 }
 
             case R.id.a3:
                 if (count % 2 == 0 && playerOneClicked) {
                     mButtons[3].setText("O");
+                    textView.setText(playerTwo + "'s Turn");
                     break;
 
                 } else {
                     mButtons[3].setText("X");
+                    textView.setText(playerOne + "'s Turn");
                     break;
                 }
 
             case R.id.b1:
                 if (count % 2 == 0 && playerOneClicked) {
                     mButtons[4].setText("O");
+                    textView.setText(playerTwo + "'s Turn");
                     break;
 
                 } else {
                     mButtons[4].setText("X");
+                    textView.setText(playerOne + "'s Turn");
                     break;
                 }
 
             case R.id.b2:
                 if (count % 2 == 0 && playerOneClicked) {
                     mButtons[5].setText("O");
+                    textView.setText(playerTwo + "'s Turn");
                     break;
 
                 } else {
                     mButtons[5].setText("X");
+                    textView.setText(playerOne + "'s Turn");
                     break;
                 }
 
             case R.id.b3:
                 if (count % 2 == 0 && playerOneClicked) {
                     mButtons[6].setText("O");
+                    textView.setText(playerTwo + "'s Turn");
                     break;
 
                 } else {
                     mButtons[6].setText("X");
+                    textView.setText(playerOne + "'s Turn");
                     break;
                 }
 
             case R.id.c1:
                 if (count % 2 == 0 && playerOneClicked) {
                     mButtons[7].setText("O");
+                    textView.setText(playerTwo + "'s Turn");
                     break;
 
                 } else {
                     mButtons[7].setText("X");
+                    textView.setText(playerOne + "'s Turn");
                     break;
                 }
 
             case R.id.c2:
                 if (count % 2 == 0 && playerOneClicked) {
                     mButtons[8].setText("O");
+                    textView.setText(playerTwo + "'s Turn");
                     break;
 
                 } else {
                     mButtons[8].setText("X");
+                    textView.setText(playerOne + "'s Turn");
                     break;
                 }
 
             case R.id.c3:
                 if (count % 2 == 0 && playerOneClicked) {
                     mButtons[9].setText("O");
+                    textView.setText(playerTwo + "'s Turn");
                     break;
 
                 } else {
                     mButtons[9].setText("X");
+                    textView.setText(playerOne + "'s Turn");
                     break;
                 }
+
+
         }
     }
 }

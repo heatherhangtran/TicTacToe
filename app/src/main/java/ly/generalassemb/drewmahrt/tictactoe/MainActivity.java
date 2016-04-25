@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         mButton = (Button) (findViewById(R.id.start_game_button));
         mTextView = (TextView) (findViewById(R.id.last_winner_text));
 
+
+
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
 
                 } else {
                     Intent intent = new Intent(MainActivity.this, GameActivity.class);
-                    intent.putExtra("Player One", playerOne);
-                    intent.putExtra("Player Two", playerTwo);
+                    intent.putExtra(GameActivity.PLAYER_ONE_TAG, playerOne);
+                    intent.putExtra(GameActivity.PLAYER_TWO_TAG, playerTwo);
                     startActivity(intent);
                 }
             }
