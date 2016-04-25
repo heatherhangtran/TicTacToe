@@ -54,11 +54,13 @@ public class GameActivity extends AppCompatActivity {
                 if (count % 2 == 0 && playerOneClicked) {
                     mButtons[1].setText("O");
                     textView.setText(playerTwo + "'s Turn");
+                    v.setClickable(false);
                     break;
 
                 } else {
                     mButtons[1].setText("X");
                     textView.setText(playerOne + "'s Turn");
+                    v.setClickable(false);
                     break;
                 }
 
@@ -66,11 +68,13 @@ public class GameActivity extends AppCompatActivity {
                 if (count % 2 == 0 && playerOneClicked) {
                     mButtons[2].setText("O");
                     textView.setText(playerTwo + "'s Turn");
+                    v.setClickable(false);
                     break;
 
                 } else {
                     mButtons[2].setText("X");
                     textView.setText(playerOne + "'s Turn");
+                    v.setClickable(false);
                     break;
                 }
 
@@ -78,11 +82,13 @@ public class GameActivity extends AppCompatActivity {
                 if (count % 2 == 0 && playerOneClicked) {
                     mButtons[3].setText("O");
                     textView.setText(playerTwo + "'s Turn");
+                    v.setClickable(false);
                     break;
 
                 } else {
                     mButtons[3].setText("X");
                     textView.setText(playerOne + "'s Turn");
+                    v.setClickable(false);
                     break;
                 }
 
@@ -90,11 +96,13 @@ public class GameActivity extends AppCompatActivity {
                 if (count % 2 == 0 && playerOneClicked) {
                     mButtons[4].setText("O");
                     textView.setText(playerTwo + "'s Turn");
+                    v.setClickable(false);
                     break;
 
                 } else {
                     mButtons[4].setText("X");
                     textView.setText(playerOne + "'s Turn");
+                    v.setClickable(false);
                     break;
                 }
 
@@ -102,11 +110,13 @@ public class GameActivity extends AppCompatActivity {
                 if (count % 2 == 0 && playerOneClicked) {
                     mButtons[5].setText("O");
                     textView.setText(playerTwo + "'s Turn");
+                    v.setClickable(false);
                     break;
 
                 } else {
                     mButtons[5].setText("X");
                     textView.setText(playerOne + "'s Turn");
+                    v.setClickable(false);
                     break;
                 }
 
@@ -114,11 +124,13 @@ public class GameActivity extends AppCompatActivity {
                 if (count % 2 == 0 && playerOneClicked) {
                     mButtons[6].setText("O");
                     textView.setText(playerTwo + "'s Turn");
+                    v.setClickable(false);
                     break;
 
                 } else {
                     mButtons[6].setText("X");
                     textView.setText(playerOne + "'s Turn");
+                    v.setClickable(false);
                     break;
                 }
 
@@ -126,11 +138,13 @@ public class GameActivity extends AppCompatActivity {
                 if (count % 2 == 0 && playerOneClicked) {
                     mButtons[7].setText("O");
                     textView.setText(playerTwo + "'s Turn");
+                    v.setClickable(false);
                     break;
 
                 } else {
                     mButtons[7].setText("X");
                     textView.setText(playerOne + "'s Turn");
+                    v.setClickable(false);
                     break;
                 }
 
@@ -138,11 +152,13 @@ public class GameActivity extends AppCompatActivity {
                 if (count % 2 == 0 && playerOneClicked) {
                     mButtons[8].setText("O");
                     textView.setText(playerTwo + "'s Turn");
+                    v.setClickable(false);
                     break;
 
                 } else {
                     mButtons[8].setText("X");
                     textView.setText(playerOne + "'s Turn");
+                    v.setClickable(false);
                     break;
                 }
 
@@ -150,11 +166,13 @@ public class GameActivity extends AppCompatActivity {
                 if (count % 2 == 0 && playerOneClicked) {
                     mButtons[9].setText("O");
                     textView.setText(playerTwo + "'s Turn");
+                    v.setClickable(false);
                     break;
 
                 } else {
                     mButtons[9].setText("X");
                     textView.setText(playerOne + "'s Turn");
+                    v.setClickable(false);
                     break;
                 }
 
