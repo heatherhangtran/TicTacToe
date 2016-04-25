@@ -54,6 +54,7 @@ public class GameActivity extends AppCompatActivity {
                 if (count % 2 == 0 && playerOneClicked) {
                     mButtons[1].setText("O");
                     textView.setText(playerTwo + "'s Turn");
+                    //HOLY mother of codes! Allowing one click for the buttons takes this simple line: goodness gracious. - thanks Alex.
                     v.setClickable(false);
                     break;
 
