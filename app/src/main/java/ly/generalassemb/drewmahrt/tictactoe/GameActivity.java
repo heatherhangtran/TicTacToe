@@ -1,15 +1,19 @@
 package ly.generalassemb.drewmahrt.tictactoe;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class GameActivity extends AppCompatActivity {
     //Saves space for buttons.
-    Button[] mButtons = new Button[10];
+    private Button[] mButtons = new Button[10];
     //The squares will be identified as integers.
-    int[] box = new int[10];
-    int counter;
+    private int count;
+    //Saves space for textview.
+    private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,36 +31,128 @@ public class GameActivity extends AppCompatActivity {
         mButtons[8] = (Button) (findViewById(R.id.c2));
         mButtons[9] = (Button) (findViewById(R.id.c3));
 
-//        for (int i = 1; i <= 9; i++) {
-//            mButtons[i].setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    if (i % 2 = 0) {
-//                        mButtons[i].setText("O");
-//                    } else {
-//                        mButtons[i].setText("X");
-//                    }
-//                }
-//            });
-//        }
+        textView = (TextView) (findViewById(R.id.game_message_text));
+
+        Intent oldIntent = getIntent();
+        String playerOne = oldIntent.getStringExtra("PlayerOne");
+        String playerTwo = oldIntent.getStringExtra("PlayerTwo");
+        textView.setText(playerOne + "'s Turn");
     }
 
-    public void playerOne(int i) {
-        mButtons[i].setText("X");
-        mButtons[i].setEnabled(false);
-        box[i] = 1;
-        //winningPlayer(i);
-    }
+    public void buttonOnClick(View v) {
+        count++;
+        boolean playerOneClicked = true;
 
-    public void playerTwo() {
-        for (int i = 1 ; i <= 9; i++) {
-            if (mButtons[i].isEnabled()) {
-                mButtons[i].setText("O");
-                mButtons[i].setEnabled(false);
-                box[i] = 2;
-                break;
-            }
+        switch (v.getId()) {
+            case R.id.a1:
+                if (count % 2 == 0 && playerOneClicked) {
+                    mButtons[1].setText("O");
+                    break;
+
+                } else {
+                    mButtons[1].setText("X");
+                    break;
+                }
+
+            case R.id.a2:
+                if (count % 2 == 0 && playerOneClicked) {
+                    mButtons[2].setText("O");
+                    break;
+
+                } else {
+                    mButtons[2].setText("X");
+                    break;
+                }
+
+            case R.id.a3:
+                if (count % 2 == 0 && playerOneClicked) {
+                    mButtons[3].setText("O");
+                    break;
+
+                } else {
+                    mButtons[3].setText("X");
+                    break;
+                }
+
+            case R.id.b1:
+                if (count % 2 == 0 && playerOneClicked) {
+                    mButtons[4].setText("O");
+                    break;
+
+                } else {
+                    mButtons[4].setText("X");
+                    break;
+                }
+
+            case R.id.b2:
+                if (count % 2 == 0 && playerOneClicked) {
+                    mButtons[5].setText("O");
+                    break;
+
+                } else {
+                    mButtons[5].setText("X");
+                    break;
+                }
+
+            case R.id.b3:
+                if (count % 2 == 0 && playerOneClicked) {
+                    mButtons[6].setText("O");
+                    break;
+
+                } else {
+                    mButtons[6].setText("X");
+                    break;
+                }
+
+            case R.id.c1:
+                if (count % 2 == 0 && playerOneClicked) {
+                    mButtons[7].setText("O");
+                    break;
+
+                } else {
+                    mButtons[7].setText("X");
+                    break;
+                }
+
+            case R.id.c2:
+                if (count % 2 == 0 && playerOneClicked) {
+                    mButtons[8].setText("O");
+                    break;
+
+                } else {
+                    mButtons[8].setText("X");
+                    break;
+                }
+
+            case R.id.c3:
+                if (count % 2 == 0 && playerOneClicked) {
+                    mButtons[9].setText("O");
+                    break;
+
+                } else {
+                    mButtons[9].setText("X");
+                    break;
+                }
         }
+
     }
+
+//    public void playerOne(int i) {
+//        mButtons[i].setText("X");
+//        mButtons[i].setEnabled(false);
+//        box[i] = 1;
+//        //winningPlayer(i);
+//    }
+//
+//    public void playerTwo() {
+//        for (int i = 1 ; i <= 9; i++) {
+//            if (mButtons[i].isEnabled()) {
+//                mButtons[i].setText("O");
+//                mButtons[i].setEnabled(false);
+//                box[i] = 2;
+//                break;
+//            }
+//        }
+//    }
 
 }

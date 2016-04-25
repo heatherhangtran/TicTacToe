@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
 
                 } else {
                     Intent intent = new Intent(MainActivity.this, GameActivity.class);
+                    intent.putExtra("Player One", playerOne);
+                    intent.putExtra("Player Two", playerTwo);
                     startActivity(intent);
                 }
             }

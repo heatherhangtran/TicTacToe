@@ -15,9 +15,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="40sp"
-        android:text="Player One&apos;s Turn"
         android:layout_centerHorizontal="true"
-        android:paddingBottom="100dp"/>
+        android:paddingBottom="100dp" />
 
     <GridLayout
         android:layout_width="match_parent"
@@ -37,7 +36,8 @@
             android:layout_columnWeight="1"
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
-            android:background="@drawable/border" />
+            android:background="@drawable/border"
+            android:onClick="buttonOnClick"/>
 
         <Button
             android:layout_width="100dp"
@@ -50,7 +50,8 @@
             android:layout_columnWeight="1"
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
-            android:background="@drawable/border" />
+            android:background="@drawable/border"
+            android:onClick="buttonOnClick"/>
 
         <Button
             android:layout_width="100dp"
@@ -63,7 +64,8 @@
             android:layout_columnWeight="1"
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
-            android:background="@drawable/border" />
+            android:background="@drawable/border"
+            android:onClick="buttonOnClick"/>
 
         <Button
             android:layout_width="100dp"
@@ -76,7 +78,8 @@
             android:layout_columnWeight="1"
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
-            android:background="@drawable/border" />
+            android:background="@drawable/border"
+            android:onClick="buttonOnClick"/>
 
         <Button
             android:layout_width="100dp"
@@ -89,7 +92,8 @@
             android:layout_columnWeight="1"
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
-            android:background="@drawable/border" />
+            android:background="@drawable/border"
+            android:onClick="buttonOnClick"/>
 
         <Button
             android:layout_width="100dp"
@@ -102,7 +106,8 @@
             android:layout_columnWeight="1"
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
-            android:background="@drawable/border" />
+            android:background="@drawable/border"
+            android:onClick="buttonOnClick"/>
 
         <Button
             android:layout_width="100dp"
@@ -115,7 +120,8 @@
             android:layout_columnWeight="1"
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
-            android:background="@drawable/border" />
+            android:background="@drawable/border"
+            android:onClick="buttonOnClick"/>
 
         <Button
             android:layout_width="100dp"
@@ -128,7 +134,8 @@
             android:layout_columnWeight="1"
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
-            android:background="@drawable/border" />
+            android:background="@drawable/border"
+            android:onClick="buttonOnClick"/>
 
         <Button
             android:layout_width="100dp"
@@ -141,7 +148,8 @@
             android:layout_columnWeight="1"
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
-            android:background="@drawable/border" />
+            android:background="@drawable/border"
+            android:onClick="buttonOnClick"/>
 
     </GridLayout>
 </RelativeLayout>

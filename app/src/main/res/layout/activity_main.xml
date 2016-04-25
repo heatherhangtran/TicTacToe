@@ -34,8 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Start Playing!"
-        android:layout_below="@id/player_two_name"
-        android:onClick="startGame"/>
+        android:layout_below="@id/player_two_name"/>
 
     <TextView
         android:id="@+id/last_winner_text"
