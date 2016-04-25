@@ -20,7 +20,7 @@ public class GameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-        //Declares Buttons
+        //Declare Buttons & TextView
         mButtons[1] = (Button) (findViewById(R.id.a1));
         mButtons[2] = (Button) (findViewById(R.id.a2));
         mButtons[3] = (Button) (findViewById(R.id.a3));
@@ -33,12 +33,15 @@ public class GameActivity extends AppCompatActivity {
 
         textView = (TextView) (findViewById(R.id.game_message_text));
 
+        //Getting intent from MainActivity.
+        //Need to fix textView alternating name.
         Intent oldIntent = getIntent();
         String playerOne = oldIntent.getStringExtra("PlayerOne");
         String playerTwo = oldIntent.getStringExtra("PlayerTwo");
         textView.setText(playerOne + "'s Turn");
     }
 
+    //Place all buttons under one method by applying android:onClick="buttonOnClick".
     public void buttonOnClick(View v) {
         count++;
         boolean playerOneClicked = true;
@@ -134,25 +137,5 @@ public class GameActivity extends AppCompatActivity {
                     break;
                 }
         }
-
     }
-
-//    public void playerOne(int i) {
-//        mButtons[i].setText("X");
-//        mButtons[i].setEnabled(false);
-//        box[i] = 1;
-//        //winningPlayer(i);
-//    }
-//
-//    public void playerTwo() {
-//        for (int i = 1 ; i <= 9; i++) {
-//            if (mButtons[i].isEnabled()) {
-//                mButtons[i].setText("O");
-//                mButtons[i].setEnabled(false);
-//                box[i] = 2;
-//                break;
-//            }
-//        }
-//    }
-
 }
