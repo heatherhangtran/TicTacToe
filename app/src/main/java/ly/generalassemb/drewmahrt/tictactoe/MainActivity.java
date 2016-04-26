@@ -2,6 +2,7 @@ package ly.generalassemb.drewmahrt.tictactoe;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         mButton = (Button) (findViewById(R.id.start_game_button));
         mTextView = (TextView) (findViewById(R.id.last_winner_text));
 
+        SharedPreferences sharedPreferences = getSharedPreferences("UniqueCode", Context.MODE_PRIVATE);
 
 
         mButton.setOnClickListener(new View.OnClickListener() {
