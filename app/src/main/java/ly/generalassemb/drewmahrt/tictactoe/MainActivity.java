@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText mPlayerOneEditText, mPlayerTwoEditText;
     private Button mButton;
     private TextView mTextView;
+    private String winner = new String();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +30,12 @@ public class MainActivity extends AppCompatActivity {
         mButton = (Button) (findViewById(R.id.start_game_button));
         mTextView = (TextView) (findViewById(R.id.last_winner_text));
 
-        SharedPreferences sharedPreferences = getSharedPreferences("UniqueCode", Context.MODE_PRIVATE);
-
+//        SharedPreferences sharedPreferences = getSharedPreferences("UniqueCode", Context.MODE_PRIVATE);
+//        winner = sharedPreferences.getString("winner", "");
+//        //System.out.println("who is the winner" + winner);
+//        //mTextView.setText(winner);
+//
+//        mTextView.setText("The last champ was " + winner);
 
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,13 +79,36 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
-                    InputMethodManager hideKeyBoard = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                    InputMethodManager hideKeyBoard = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                     hideKeyBoard.hideSoftInputFromWindow(mPlayerTwoEditText.getWindowToken(), 0);
                     return true;
                 }
                 return false;
             }
         });
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        SharedPreferences sharedPreferences = getSharedPreferences("UniqueCode", Context.MODE_PRIVATE);
+        winner = sharedPreferences.getString("winner", "");
+
+        mTextView.setText("The last champ was " + winner);
+    }
+
+    @Override
+    public void onRestart() {
+        super.onRestart();
+        SharedPreferences sharedPreferences = getSharedPreferences("UniqueCode", Context.MODE_PRIVATE);
+        winner = sharedPreferences.getString("winner", "");
+        //System.out.println("who is the winner" + winner);
+        //mTextView.setText(winner);
+
+        mTextView.setText("The last champ was " + winner);
     }
 
 }
+
+//onSavedInstanceState to save the game board state - changing orientation.
